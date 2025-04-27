@@ -1,8 +1,10 @@
 //import { loadShaders } from "./webgl.mjs"; // Might try implementing WebGL later
+import * as CanvasElement from "./canvaselement.mjs";
 
 // Variables
 var canvas;
 var ctx;
+var objects = []
 
 var prevMouseX = 0;
 var prevMouseY = 0;
@@ -91,9 +93,7 @@ async function getWord(startLetter) {
         prevWord = defaultWords[startLetter];
     }
 
-    ctx.font = "bold small-caps " + Math.round((Math.random()*40)+20) + "px Futura";
-    ctx.fillStyle = "rgba(255,255,255,1)";
-    ctx.fillText(prevWord, mouseX, mouseY);
+    objects.push(new CanvasElement.FloatingText(prevWord));
 }
 
 function handleQuirk(num) {
@@ -101,21 +101,31 @@ function handleQuirk(num) {
 }
 
 function heartbeat() {
-    // ctx.reset();
-
-    ctx.beginPath();
     const movementRatio = 0.05;
     var movementMagnitude = Math.abs(mouseX - prevMouseX) + Math.abs(mouseY - prevMouseY);
     var movementRadius = (movementRatio * (movementMagnitude+5)) + ((1-movementRatio) * prevRadius);
     var movementAlpha = Math.min(1, (movementRadius-5)/100)
 
-    ctx.arc(mouseX, mouseY, movementRadius, 0, 2 * Math.PI);
-    ctx.fillStyle = "rgba(255,255,255," + movementAlpha + ")";
-    ctx.fill();
+    objects.push(new CanvasElement.Ripple(mouseX, mouseY, movementRadius, movementAlpha));
+    draw();
+    update();
 
     prevRadius = movementRadius;
     prevMouseX = mouseX;
     prevMouseY = mouseY;
+}
+
+function draw() {
+    ctx.reset();
+    for (const object of objects) {
+        object.draw(ctx);
+    }
+}
+
+function update() {
+    for (const object of objects) {
+        object.update(objects);
+    }
 }
 
 function mouseover(event) {
