@@ -1,0 +1,41 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(45deg, rgba(199, 161, 183, 1) 0%, rgba(245, 157, 127, 1) 33%, rgba(247, 198, 124, 1) 66%, rgba(255, 226, 145, 1) 100%);
+}
+
+h1 {
+    text-align: center;
+    vertical-align: middle;
+    color:white;
+    font: bold small-caps 160px Futura;
+    text-shadow: 2px 2px black;
+}
+
+h2 {
+    text-align: center;
+    vertical-align: middle;
+    color:white;
+    font: 60px Futura;
+    text-shadow: 2px 2px black;
+}
+
+h3 {
+    text-align: center;
+    vertical-align: middle;
+    color:white;
+    font: 20px Futura;
+    text-shadow: 2px 2px black;
+}
+
+a {
+    text-align: center;
+    vertical-align: middle;
+    color:white;
+    font: 20px Futura;
+    text-shadow: 2px 2px black;
+}
