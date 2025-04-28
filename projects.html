@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="/css/index.css">
-    </head>
-    <body>
-        <h2>Hi! I'm</h2>
-        <h1>Jace</h1>
-        <h3></h3>
-        <a href="about.html">About me!</a>
-        <a href="projects.html">See my projects!</a>
-    </body>
+<head>
+
+<link rel="stylesheet" href="/css/projects.css">
+
+</head>
+<body>
+
+<a id="back" href="/"></a>
+<div class="tabs">
+    <button id="Code">Code</button>
+    <!--button id="Graphic Design">Graphic Design</button>
+    <button id="Music">Music</button-->
+</div>
+<div class="content">
+    <div id="Code" class="tabinfo">
+        <h1>Code</h1>
+        <h2>Capstone Project - Small Scale Winery Inventory Manager</h2>
+        <p>As of the time I'm writing this, I'm graduating college in 2 weeks! So, me and my three teammates are currently putting the finishing touches on our 3-month software development project for our computer science capstone. In it, we worked with a local winery to produce an inventory management tool that can be used to help monitor wine sales. It can be used to see recent sales, average annual sales, and an estimate of how long remaining inventory will last.</p>
+        <p>Note: While the program is currently hosted online, a majority of the pages are inaccessible to new users without the client's explicit approval. So, below is the final presentation we gave for it, including a few video clips to show off what we've made using some dummy data. :)</p>
+        <!--Canva embed-->
+        <div class="canva">
+        <iframe loading="lazy"
+            src="https://www.canva.com/design/DAGl4p3vDIs/Lk7NGqOGQOpAM7uNirEA8g/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+        </iframe>
+        </div>
+        <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGl4p3vDIs&#x2F;Lk7NGqOGQOpAM7uNirEA8g&#x2F;view?utm_content=DAGl4p3vDIs&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Copy of Capstone Presentation</a> by Jace Salinas
+        <!--Canva embed-->
+        <p>I primarily worked on the inventory upload portion of the website. It was a bit of a struggle -- mostly because of weirdness with Django. The formsets used to prompt for wine information, while incredibly versatile once you know how to use them, are a bit of a nightmare to learn for the first time since information surrounding them is a bit scarce. Unexpectedly, autofilling the fields was pretty complicated as well. Sending data from the Wine model to the frontend is unfortunately not as simple as calling some Django function. The data had to be serialized to JSON, then deserialized on the JavaScript end (which initially caused a lot of string escape issues). And THEN it still had to be matched with the selected wine's internal ID. You can imagine such an undertaking is quite daunting for someone who had never written anything in JavaScript at the time! But, I feel the final result is quite user-friendly (and, hopefully some of the stuff on this portfolio shows that it helped me become a lot more comfortable with the language)! :)</p>
+        <p>I also worked a decent amount on the initial database design and the search function on the inventory view. Nothing quite as involved as the CSV part, but important components nonetheless.</p>
+        <h3>Check back soon for other projects I've worked on!! This is a brand new site, so I'm still adding stuff.</h3>
+    </div>
+    <div id="Graphic Design" class="tabinfo">
+        
+    </div>
+    <div id="Music" class="tabinfo">
+        
+    </div>
+</div>
+
+</body>
 </html>
