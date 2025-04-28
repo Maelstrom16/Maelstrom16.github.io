@@ -5,6 +5,7 @@ import * as CanvasElement from "./canvaselement.mjs";
 var canvas;
 var ctx;
 var objects = []
+var sourceText;
 
 var prevMouseX = 0;
 var prevMouseY = 0;
@@ -15,21 +16,25 @@ var prevRadius = 5;
 var prevWord = "creative"
 
 // Execute on startup
-window.onload = function(){
+window.onload = async function(){
     // Link events
-    document.addEventListener("keydown", handleKeyboardInput)
+    document.addEventListener("keydown", handleKeyboardInput);
+    document.addEventListener("mousemove", mouseover);
 
     // Get canvas and resize
     canvas = document.getElementById("canvas");
-    canvas.addEventListener("mousemove", mouseover)
     resizeCanvas();
-    window.addEventListener("resize", resizeCanvas)
+    window.addEventListener("resize", resizeCanvas);
 
     // Get context for drawing
     ctx = canvas.getContext("2d");
 
     // Set heartbeat function
     setInterval(heartbeat, 10);
+
+    // Load source from this file
+    var response = await fetch("js/index.mjs");
+    sourceText = await response.text();
 
     //loadShaders(canvas);
 }
@@ -101,15 +106,18 @@ function handleQuirk(num) {
 }
 
 function heartbeat() {
+    // Calculate parameters for ripple effect around mouse
     const movementRatio = 0.05;
     var movementMagnitude = Math.abs(mouseX - prevMouseX) + Math.abs(mouseY - prevMouseY);
     var movementRadius = (movementRatio * (movementMagnitude+5)) + ((1-movementRatio) * prevRadius);
     var movementAlpha = Math.min(1, (movementRadius-5)/100)
 
+    // Add ripple effect
     objects.push(new CanvasElement.Ripple(mouseX, mouseY, movementRadius, movementAlpha));
     draw();
     update();
 
+    // Update previous variables
     prevRadius = movementRadius;
     prevMouseX = mouseX;
     prevMouseY = mouseY;

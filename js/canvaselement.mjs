@@ -26,8 +26,8 @@ export class Ripple extends CanvasElement {
     }
 
     update(objects) {
-        this.radius += 5;
-        this.alpha -= 0.02;
+        this.radius += 3;
+        this.alpha -= 0.015;
         if (this.alpha < 0)
             objects.splice(objects.indexOf(this), 1)
     }
