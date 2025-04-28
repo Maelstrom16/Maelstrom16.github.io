@@ -46,7 +46,7 @@ export class FloatingText extends CanvasElement {
     }
 
     draw(ctx) {
-        ctx.font = "bold small-caps " + this.fontsize + "px Futura";
+        ctx.font = "bold small-caps " + this.fontsize + "px \"Lexend\"";
         ctx.fillStyle = "rgba(255,255,255," + this.alpha + ")";
         ctx.fillText(this.text, this.x, this.y);
     }

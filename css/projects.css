@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&family=Lexend:wght@100..900&display=swap');
+
 html {
     height: auto;
 }
@@ -16,6 +18,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: black;
+    font: 18px "Carrois Gothic";
     text-align: justify;
     text-align-last: center;
 
@@ -24,25 +28,24 @@ body {
 
 h1 {
     color: white;
-    font: bold small-caps 80px Futura;
+    font: bold small-caps 80px "Lexend";
     text-shadow: 5px 5px black;
 }
 
 h2 {
     color: white;
-    font: 40px Futura;
+    font: 36px "Lexend";
     text-shadow: 3px 3px black;
 }
 
 h3 {
     color: white;
-    font: 30px Futura;
+    font: 30px "Lexend";
     text-shadow: 2px 2px black;
 }
 
-a,p {
-    color: black;
-    font: 18px TrebuchetMS;
+a {
+    color: darkred;
 }
 
 #back {
@@ -55,19 +58,18 @@ a,p {
     background-position: center;
     background-size: 80%;
     image-rendering: pixelated;
-    border: 2px;
-    border-color: white;
-    border-style: solid;
-    border-radius: 8px;
-}
-
-#back:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    background-image: url("/images/back_black.png");
     border: 3px;
     border-color: white;
     border-style: solid;
-    border-radius: 16px;
+}
+
+#back:hover {
+    position: fixed;
+    width: 54px;
+    height: 54px;
+    margin: -2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-image: url("/images/back_black.png");
 }
 
 .tabs > button {
@@ -77,7 +79,7 @@ a,p {
 
     background-color: white;
     color: black;
-    font: 20px Futura;
+    font: 20px "Lexend";
     border: 0;
     border-radius: 8px;
 }
