@@ -7,6 +7,7 @@
 </head>
 <body>
 
+<div class="header"></div>
 <a id="back" href="/"></a>
 <div class="tabs">
     <button id="Code">Code</button>
@@ -20,7 +21,7 @@
         <p>As of the time I'm writing this, I'm graduating college in 2 weeks! So, me and my three teammates are currently putting the finishing touches on our 3-month software development project for our computer science capstone. In it, we worked with a local winery to produce an inventory management tool that can be used to help monitor wine sales. It can be used to see recent sales, average annual sales, and an estimate of how long remaining inventory will last.</p>
         <p>Note: While the program is currently hosted online, a majority of the pages are inaccessible to new users without the client's explicit approval. So, below is the final presentation we gave for it, including a few video clips to show off what we've made using some dummy data. :)</p>
         <!--Canva embed-->
-        <div class="canva">
+        <div class="httpcontainer">
         <iframe loading="lazy"
             src="https://www.canva.com/design/DAGl4p3vDIs/Lk7NGqOGQOpAM7uNirEA8g/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
         </iframe>
@@ -29,6 +30,42 @@
         <!--Canva embed-->
         <p>I primarily worked on the inventory upload portion of the website. It was a bit of a struggle -- mostly because of weirdness with Django. The formsets used to prompt for wine information, while incredibly versatile once you know how to use them, are a bit of a nightmare to learn for the first time since information surrounding them is a bit scarce. Unexpectedly, autofilling the fields was pretty complicated as well. Sending data from the Wine model to the frontend is unfortunately not as simple as calling some Django function. The data had to be serialized to JSON, then deserialized on the JavaScript end (which initially caused a lot of string escape issues). And THEN it still had to be matched with the selected wine's internal ID. You can imagine such an undertaking is quite daunting for someone who had never written anything in JavaScript at the time! But, I feel the final result is quite user-friendly (and, hopefully some of the stuff on this portfolio shows that it helped me become a lot more comfortable with the language)! :)</p>
         <p>I also worked a decent amount on the initial database design and the search function on the inventory view. Nothing quite as involved as the CSV part, but important components nonetheless.</p>
+        <h2>Game Engine Experiments</h2>
+        <p>I, like many computer science enthusiasts, am a big fan of video games! Naturally, this has led me to mess around with a few game engines. Here are some examples of my little experiments:</p>
+        <div class="columns">
+            <div>
+                <h3>Unity</h3>
+                <p>Unity is a high-level game engine that offers tons of features to help ease the game development process, using C# as its scripting language. While I've never made a fully-fledged game using it, I have played around with it a fair bit. As an example, VRChat requires the use of Unity to set up player models, and I made one of those. Have a look behind the scenes:</p>
+            </div>
+            <div>
+                <h3>Monogame</h3>
+                <p>Also using C#, Monogame is really more of a framework than an engine. Unlike Unity, it doesn't offer a lot in the way of physics components, 3D renderers, and the like -- all of that has to be programmed manually. So, most of my experiments here have revolved around learning what makes those kinds of components work. Here's an example of a 3D renderer I made using it:</p>.
+            </div>
+            <div>
+                <h3>Roblox</h3>
+                <p>Roblox is how I got my start with programming. It's a good way to learn the basics of network programming, database management, UI design, and pretty much anything else using a simple, easy-to-learn model. The programming language, Lua, is also quite intuitive for beginners. I've created quite a few little experiments over the years. Here are a few examples:</p>.
+            </div>
+        </div>
+        <h2>Video Game Mods</h2>
+        <p>Even with games like Minecraft or the Sims where possibilities are seemingly endless, there's often that lingering feeling of "what could've been." A lot of times, that sinking feeling quickly devolves into me modding the game to make my random thoughts into reality. Below are a few examples of things I've made:</p>
+        <div class="columns">
+            <div>
+                <h3>Celeste</h3>
+                <p>Not to brag, but I'm pretty good at Celeste (highly recommend it to any of those who are interested). The modding scene has thousands of user-made levels that teach movement tech at a wide range of difficulties, play around with the mechanics, or add entirely new ones. In particular, I'm a huge fan of <a href="https://youtu.be/55m5NN1v3W8?si=_9hzEZJNONnkNU7t">speed tech</a> (not my level, but a good example). Unfortunately for me, a lot of the existing mechanics don't conserve momentum, so it's a bit difficult to design fast gameplay without it becoming monotonous. So, I made a few versions that <i>do</i> conserve it:</p>
+                <p>These bumpers and arrow crystals conserve the player's momentum, which allow for some pretty wild gameplay even while you're holding the little crystal.</p>
+                <p>Mods for Celeste, including the example above, are programmed in C# (it's actually made in Monogame!).</p>
+            </div>
+            <div>
+                <h3>Minecraft</h3>
+                <p>When I was in 6th grade, I found a YouTube tutorial online to make your own mod for Minecraft 1.6.4. So, I downloaded Eclipse, learned a bit of Java, and managed to get a small Terraria-esque mod running that added copper, its tools and armor, and blinkroots (odd final choice, but I digress). I can't seem to find it anymore, but if I do, I'll try to get it up and running again.</p>
+                <p>I've recently revisited this interest, and <a href="https://github.com/Maelstrom16/Railway6">made some progress toward porting a mod I like</a> to a new version. While it still doesn't quite launch yet, resolving 1800+ errors has allowed it to finally compile!</p>
+                <p>And, I have some plans for my own mod now. Perhaps something to work on after I finish up here. ;)</p>
+            </div>
+        </div>
+        <p>Creating mods for existing games is a unique challenge. You have to build a sufficiently deep understanding of how the game works, not only so that you can understand what's already there, but also so you can build upon it without completely breaking everything. It's a mess of hooks, injections, and mixins. But, once you do get something up and running, it's super cool to see your creation ingame.</p>
+        <h2>Other Projects</h2>
+        <p>Aside from what I've already mentioned, I also have a little <a href="https://github.com/Maelstrom16/Hydra">Game Boy emulator</a> I work on when I have time. It's not super far along, but it's able to read .gb files and interpret the information from the cartridge header.</p>
+
         <h3>Check back soon for other projects I've worked on!! This is a brand new site, so I'm still adding stuff.</h3>
     </div>
     <div id="Graphic Design" class="tabinfo">
