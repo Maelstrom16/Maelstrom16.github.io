@@ -21,7 +21,7 @@
         <p>As of the time I'm writing this, I'm graduating college in 2 weeks! So, me and my three teammates are currently putting the finishing touches on our 3-month software development project for our computer science capstone. In it, we worked with a local winery to produce an inventory management tool that can be used to help monitor wine sales. It can be used to see recent sales, average annual sales, and an estimate of how long remaining inventory will last.</p>
         <p>Note: While the program is currently hosted online, a majority of the pages are inaccessible to new users without the client's explicit approval. So, below is the final presentation we gave for it, including a few video clips to show off what we've made using some dummy data. :)</p>
         <!--Canva embed-->
-        <div class="httpcontainer">
+        <div class="canva">
         <iframe loading="lazy"
             src="https://www.canva.com/design/DAGl4p3vDIs/Lk7NGqOGQOpAM7uNirEA8g/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
         </iframe>
@@ -35,25 +35,66 @@
         <div class="columns">
             <div>
                 <h3>Unity</h3>
-                <p>Unity is a high-level game engine that offers tons of features to help ease the game development process, using C# as its scripting language. While I've never made a fully-fledged game using it, I have played around with it a fair bit. As an example, VRChat requires the use of Unity to set up player models, and I made one of those. Have a look behind the scenes:</p>
+                <p>Unity is a high-level game engine that offers tons of features to help ease the game development process, using C# as its scripting language. While I've never made a fully-fledged game using it, I have played around with it a fair bit, both for standalone projects and for other platforms. As an example of the latter, VRChat requires the use of Unity to set up player models, and I made one of those. Have a look behind the scenes:</p>
+                <div>
+                    <img src="/images/unity_vrc-bones.png">
+                </div>
+                <p>So many bones...</p>
+                <video width="640" height="480" autoplay loop muted>
+                    <source src="/videos/unity_vrc-demo.webm" type="video/webm" />
+                </video>
+                <p>...But they all have a purpose!</p>
+                <p>Other than the model, I've also made a simple game of Hearts. I have unfortunately misplaced the file, so I can't include any clips for now. At any rate, it was a simple project, but it was functional! It helped familiarize me with the engine before tackling things like the model above.</p>
+                <p>I've also toyed around with 3D rendering and shaders. But my experience there is probably better shown in Monogame, which uses the same programming languages.</p>
             </div>
             <div>
                 <h3>Monogame</h3>
-                <p>Also using C#, Monogame is really more of a framework than an engine. Unlike Unity, it doesn't offer a lot in the way of physics components, 3D renderers, and the like -- all of that has to be programmed manually. So, most of my experiments here have revolved around learning what makes those kinds of components work. Here's an example of a 3D renderer I made using it:</p>.
+                <p>Also using C#, Monogame is really more of a framework than an engine. Unlike Unity, it doesn't offer a lot in the way of physics components, 3D renderers, and the like -- all of that has to be programmed manually. So, most of my experiments here have revolved around learning what makes those kinds of components work. Here's an demo of a 3D renderer I made that accepts keyboard input, along with a shader written in HLSL:</p>
+                <video width="640" height="480" autoplay loop muted>
+                    <source src="/videos/monogame_renderer-demo.webm" type="video/webm" />
+                </video>
+                <p>You can feel every polygon and pixel--very PS1 esque.</p>
+                <div>
+                    <img src="/images/monogame_renderer-csharp.png">
+                </div>
+                <p>A snippet of the C# code.</p>
+                <div>
+                    <img src="/images/monogame_renderer-hlsl.png">
+                </div>
+                <p>A snippet of the HLSL code.</p>
             </div>
             <div>
                 <h3>Roblox</h3>
-                <p>Roblox is how I got my start with programming. It's a good way to learn the basics of network programming, database management, UI design, and pretty much anything else using a simple, easy-to-learn model. The programming language, Lua, is also quite intuitive for beginners. I've created quite a few little experiments over the years. Here are a few examples:</p>.
+                <p>Roblox is how I got my start with programming. It's a good way to learn the basics of network programming, database management, UI design, and pretty much anything else using a simple, easy-to-learn model. The programming language, Lua, is also quite intuitive for beginners. While I haven't touched it for some time now, I've created quite a few little experiments over the years. Here are a few examples:</p>
+                <video width="640" height="480" autoplay loop muted>
+                    <source src="/videos/roblox_sugar-rush.webm" type="video/webm" />
+                </video>
+                <p>Probably the most ambitious. Has lobby minigames and an intro cutscene.</p>
+                <video width="640" height="480" autoplay loop muted>
+                    <source src="/videos/roblox_tennis.webm" type="video/webm" />
+                </video>
+                <p>The trajectory, power, and spin of the ball all affect physics simulation.</p>
+                <video width="640" height="480" autoplay loop muted>
+                    <source src="/videos/roblox_casino.webm" type="video/webm" />
+                </video>
+                <p>This one's my oldest--7 years. It's buggy, but cool to see where it all started.</p>
             </div>
         </div>
+        <p>Most of my experiments in these engines don't amount to a whole lot. Usually, I'm just seeing what I can do, and at most, I may produce only part of a game during what little time I have to work on it. But, over so many mini projects, I know how things work pretty well at this point.</p>
         <h2>Video Game Mods</h2>
         <p>Even with games like Minecraft or the Sims where possibilities are seemingly endless, there's often that lingering feeling of "what could've been." A lot of times, that sinking feeling quickly devolves into me modding the game to make my random thoughts into reality. Below are a few examples of things I've made:</p>
         <div class="columns">
             <div>
                 <h3>Celeste</h3>
-                <p>Not to brag, but I'm pretty good at Celeste (highly recommend it to any of those who are interested). The modding scene has thousands of user-made levels that teach movement tech at a wide range of difficulties, play around with the mechanics, or add entirely new ones. In particular, I'm a huge fan of <a href="https://youtu.be/55m5NN1v3W8?si=_9hzEZJNONnkNU7t">speed tech</a> (not my level, but a good example). Unfortunately for me, a lot of the existing mechanics don't conserve momentum, so it's a bit difficult to design fast gameplay without it becoming monotonous. So, I made a few versions that <i>do</i> conserve it:</p>
-                <p>These bumpers and arrow crystals conserve the player's momentum, which allow for some pretty wild gameplay even while you're holding the little crystal.</p>
-                <p>Mods for Celeste, including the example above, are programmed in C# (it's actually made in Monogame!).</p>
+                <p>Not to brag, but I'm pretty good at Celeste (highly recommend it to any of those who are interested). The modding scene has thousands of user-made levels that teach movement tech at a wide range of difficulties, play around with the mechanics, or add entirely new ones. In particular, I'm a huge fan of <a href="https://youtu.be/55m5NN1v3W8?si=_9hzEZJNONnkNU7t">speed tech</a> (not my level, but a good example). Unfortunately for me, a lot of the vanilla mechanics don't conserve momentum, so it's a bit difficult to design fast gameplay without it becoming monotonous. To fix this egregious oversight, I fired up Visual Studio and C Sharped a few versions which <i>do</i> conserve it:</p>
+                <video width="640" height="480" autoplay loop muted>
+                    <source src="/videos/celeste_momentum-demo.webm" type="video/webm" />
+                </video>
+                <p>Here are a couple of the components I added. The arrow redirects the player's speed, while the bumpers reflect it.</p>
+                <video width="640" height="480" autoplay loop muted>
+                    <source src="/videos/celeste_momentum-level.webm" type="video/webm" />
+                </video>
+                <p>Here's how they might be used, courtesy of a custom level I made. It gets pretty wild, even while holding Theo.</p>
             </div>
             <div>
                 <h3>Minecraft</h3>
